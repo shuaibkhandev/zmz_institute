@@ -56,6 +56,7 @@ const Footer = () => {
                 </div>
                 <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
                     &copy; {new Date().getFullYear()} ZMZ Institute. All rights reserved.
+                    <p className="mt-2">Developed by <a href="https://welivesoft.com/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Welivesoft</a></p>
                 </div>
             </div>
         </footer>

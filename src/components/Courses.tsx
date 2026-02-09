@@ -8,7 +8,11 @@ const Courses = () => {
                 <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Popular Courses</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {courses.map((course) => (
-                        <div key={course.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <Link
+                            key={course.id}
+                            href={`/courses/${course.id}`}
+                            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block"
+                        >
                             <div className="h-48 bg-blue-100 flex items-center justify-center">
                                 {/* Placeholder for Course Image */}
                                 <span className="text-blue-500 font-semibold">{course.imagePlaceholder} Image</span>
@@ -18,12 +22,12 @@ const Courses = () => {
                                 <p className="text-gray-600 mb-4">{course.description}</p>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm font-semibold text-blue-600">{course.duration}</span>
-                                    <Link href={`/courses/${course.id}`} className="text-blue-600 hover:text-blue-800 font-medium">
+                                    <span className="text-blue-600 font-medium">
                                         Learn More &rarr;
-                                    </Link>
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
                 <div className="text-center mt-12">
